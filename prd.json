@@ -1,0 +1,295 @@
+{
+  "project": {
+    "name": "evm-agent-skills",
+    "type": "skill-package",
+    "status": "prd",
+    "owner": "rickkdev",
+    "repository": "https://github.com/rickkdev/evm-agent-skills",
+    "summary": "A deep operational skill package for AI agents building production-grade EVM protocols, starting with Solidity and Foundry testing methodology.",
+    "non_goals": [
+      "Do not build a generic web3 link directory.",
+      "Do not scaffold toy ERC20 projects.",
+      "Do not claim to automatically audit contracts in v0.",
+      "Do not compete with Foundry's compiler, test runner, fuzzing engine, or deploy tooling.",
+      "Do not make skills into essays without executable agent workflows."
+    ]
+  },
+  "positioning": {
+    "core_thesis": "Foundry provides the EVM development substrate. evm-agent-skills provides the agent-readable methodology layer: how to structure Solidity, derive tests, unify deploy/test setup, bound fuzzing, and use deterministic Foundry feedback safely.",
+    "value_beyond_foundry": [
+      "Agent-readable development and verification methodology.",
+      "Operational checklists and examples for production-grade Solidity workflows.",
+      "Exact pinned references to audited or production-proven implementations.",
+      "Skills that can be loaded narrowly per task instead of one giant context dump.",
+      "A future dependency for agentic-solidity CLI and other agent runners."
+    ],
+    "quality_bar": "If a skill could fit in a basic Ethereum cheat-sheet, it is too shallow for this repo. Each skill must help an agent make better engineering decisions and produce verifiable code."
+  },
+  "audience": [
+    "AI coding agents working inside EVM protocol repositories",
+    "Solidity developers who want repeatable agent workflows",
+    "Future agentic-solidity CLI users",
+    "Protocol teams adopting agent-assisted development without lowering safety standards"
+  ],
+  "v0_scope": {
+    "primary_stack": ["Solidity", "Foundry", "Forge tests", "Forge scripts"],
+    "skill_families": [
+      {
+        "id": "write-solidity",
+        "purpose": "Teach agents how to structure and write Solidity modules without relying on training-data averages.",
+        "initial_skills": [
+          "module-structure",
+          "naming-and-natspec",
+          "security-primitives-checklist"
+        ]
+      },
+      {
+        "id": "test-verify",
+        "purpose": "Teach agents how to design rigorous Foundry test suites that create deterministic feedback loops.",
+        "initial_skills": [
+          "deploy-test-unification",
+          "branching-tree-technique",
+          "constraint-derived-fuzz-bounds",
+          "invariant-handler-store-pattern"
+        ]
+      }
+    ],
+    "future_skill_families": [
+      "audit-and-safety-review",
+      "deployment-and-operations",
+      "upgrades-and-migrations",
+      "defi-patterns",
+      "cross-chain-and-bridging",
+      "account-abstraction"
+    ]
+  },
+  "repository_structure": {
+    "required_files": [
+      "README.md",
+      "prd.json",
+      "skills/manifest.json",
+      "skills/write-solidity/module-structure/SKILL.md",
+      "skills/test-verify/deploy-test-unification/SKILL.md",
+      "skills/test-verify/branching-tree-technique/SKILL.md"
+    ],
+    "target_tree": [
+      "skills/manifest.json",
+      "skills/write-solidity/module-structure/SKILL.md",
+      "skills/write-solidity/module-structure/references/",
+      "skills/write-solidity/naming-and-natspec/SKILL.md",
+      "skills/write-solidity/security-primitives-checklist/SKILL.md",
+      "skills/test-verify/deploy-test-unification/SKILL.md",
+      "skills/test-verify/deploy-test-unification/references/",
+      "skills/test-verify/branching-tree-technique/SKILL.md",
+      "skills/test-verify/branching-tree-technique/references/",
+      "skills/test-verify/constraint-derived-fuzz-bounds/SKILL.md",
+      "skills/test-verify/invariant-handler-store-pattern/SKILL.md",
+      "examples/foundry-deploy-test-unification/",
+      "examples/foundry-branching-tree/",
+      "docs/curation-policy.md",
+      "docs/skill-authoring-guide.md"
+    ]
+  },
+  "skill_format": {
+    "standard": "Anthropic-style SKILL.md with optional references, examples, and scripts directories.",
+    "requirements": [
+      "Each skill starts with YAML frontmatter containing name and description.",
+      "Each skill explains when to use it and when not to use it.",
+      "Each skill contains a step-by-step agent workflow.",
+      "Each skill includes concrete Foundry/Solidity examples where useful.",
+      "Each skill links exact source files, preferably pinned to commit SHAs.",
+      "Each skill includes verification commands and expected outcomes.",
+      "Each skill avoids vague advice and subjective claims without checks."
+    ],
+    "anti_patterns": [
+      "Long essays without instructions.",
+      "Unpinned repo-root reference links.",
+      "Security claims without an explicit review pass.",
+      "Copying large external codebases into the repo.",
+      "Generic Ethereum basics better suited for ethskills."
+    ]
+  },
+  "reference_curation_policy": {
+    "criteria": [
+      "Audited or production-proven",
+      "Readable source structure",
+      "Strong tests",
+      "License-compatible",
+      "Exact file links",
+      "Prefer pinned commit SHAs",
+      "Clear explanation of why the reference is included"
+    ],
+    "initial_candidates": [
+      "OpenZeppelin for primitives and standard patterns",
+      "Sablier for streaming and advanced testing references",
+      "Aave GHO for facilitator/stablecoin architecture",
+      "Hifi V3 for branching-tree and testing methodology references"
+    ]
+  },
+  "milestones": [
+    {
+      "id": "m0",
+      "title": "Repository foundation",
+      "goal": "Create the repo skeleton, manifest, docs, and authoring standards.",
+      "deliverables": [
+        "README.md explains purpose and non-goals",
+        "skills/manifest.json exists and validates as JSON",
+        "docs/curation-policy.md exists",
+        "docs/skill-authoring-guide.md exists",
+        "Empty skill directories exist for v0 scope"
+      ]
+    },
+    {
+      "id": "m1",
+      "title": "Deploy/test unification skill",
+      "goal": "Create the first flagship skill showing how Foundry deploy scripts and test setup should share construction logic.",
+      "deliverables": [
+        "skills/test-verify/deploy-test-unification/SKILL.md",
+        "At least one reference markdown file",
+        "Minimal Foundry example demonstrating shared deploy logic",
+        "Verification commands using forge build and forge test"
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Branching-tree testing skill",
+      "goal": "Document the branch-complete spec workflow that maps .tree specs into concrete and fuzz tests.",
+      "deliverables": [
+        "skills/test-verify/branching-tree-technique/SKILL.md",
+        "Example .tree spec",
+        "Example matching Foundry tests",
+        "Agent workflow for deriving tests from a tree"
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Fuzz and invariant skills",
+      "goal": "Teach agents how to derive useful fuzz bounds and build invariant handler/store patterns.",
+      "deliverables": [
+        "skills/test-verify/constraint-derived-fuzz-bounds/SKILL.md",
+        "skills/test-verify/invariant-handler-store-pattern/SKILL.md",
+        "Examples showing useful vs useless fuzz domains",
+        "Invariant handler/store example"
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Write-solidity skill family",
+      "goal": "Create initial code-structure and style skills that guide contract architecture before tests are written.",
+      "deliverables": [
+        "skills/write-solidity/module-structure/SKILL.md",
+        "skills/write-solidity/naming-and-natspec/SKILL.md",
+        "skills/write-solidity/security-primitives-checklist/SKILL.md"
+      ]
+    },
+    {
+      "id": "m5",
+      "title": "Package readiness for CLI consumption",
+      "goal": "Make the skill package easy for a future CLI to resolve, pin, and load narrowly per task.",
+      "deliverables": [
+        "Manifest lists all skills with ids, paths, descriptions, tags, and version",
+        "All skill paths are stable",
+        "README documents how another tool should consume the package",
+        "Basic validation script or documented validation command"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "create-foundation",
+      "title": "Create initial repository foundation",
+      "status": "pending",
+      "target_paths": ["README.md", "prd.json", "skills/manifest.json", "docs/curation-policy.md", "docs/skill-authoring-guide.md"],
+      "acceptance": [
+        "README explains the repo in plain language",
+        "prd.json validates as JSON",
+        "manifest exists and validates as JSON",
+        "docs explain reference curation and skill authoring rules"
+      ]
+    },
+    {
+      "id": "create-skill-skeletons",
+      "title": "Create v0 skill directory skeletons",
+      "status": "pending",
+      "target_paths": ["skills/write-solidity/", "skills/test-verify/"],
+      "acceptance": [
+        "All v0 skill directories exist",
+        "Each skill directory contains SKILL.md placeholder with correct frontmatter",
+        "References directories exist where needed"
+      ]
+    },
+    {
+      "id": "author-deploy-test-unification",
+      "title": "Author deploy/test unification skill",
+      "status": "pending",
+      "target_paths": ["skills/test-verify/deploy-test-unification/SKILL.md", "examples/foundry-deploy-test-unification/"],
+      "acceptance": [
+        "Skill explains why test setup must use deployment logic",
+        "Skill includes Foundry layout and copyable patterns",
+        "Example passes forge build and forge test",
+        "References are exact and preferably pinned"
+      ]
+    },
+    {
+      "id": "author-branching-tree-technique",
+      "title": "Author branching-tree technique skill",
+      "status": "pending",
+      "target_paths": ["skills/test-verify/branching-tree-technique/SKILL.md", "examples/foundry-branching-tree/"],
+      "acceptance": [
+        "Skill defines .tree spec structure",
+        "Skill maps tree branches to concrete tests",
+        "Skill maps constraints to fuzz bounds",
+        "Example includes contract, tree, and tests"
+      ]
+    },
+    {
+      "id": "author-fuzz-invariant-skills",
+      "title": "Author fuzz bounds and invariant skills",
+      "status": "pending",
+      "target_paths": ["skills/test-verify/constraint-derived-fuzz-bounds/SKILL.md", "skills/test-verify/invariant-handler-store-pattern/SKILL.md"],
+      "acceptance": [
+        "Fuzz skill shows constraint-derived bound selection",
+        "Invariant skill shows handler/store pattern",
+        "Both include verification commands and anti-patterns"
+      ]
+    },
+    {
+      "id": "author-write-solidity-skills",
+      "title": "Author initial write-solidity skills",
+      "status": "pending",
+      "target_paths": ["skills/write-solidity/module-structure/SKILL.md", "skills/write-solidity/naming-and-natspec/SKILL.md", "skills/write-solidity/security-primitives-checklist/SKILL.md"],
+      "acceptance": [
+        "Skills are operational and agent-facing",
+        "Skills include concrete Solidity examples",
+        "Skills avoid generic beginner material"
+      ]
+    },
+    {
+      "id": "validate-package",
+      "title": "Validate package for future CLI consumption",
+      "status": "pending",
+      "target_paths": ["skills/manifest.json", "README.md"],
+      "acceptance": [
+        "Manifest has stable ids and paths",
+        "Every manifest skill path exists",
+        "README documents package consumption model",
+        "No skill is referenced vaguely by repo root only"
+      ]
+    }
+  ],
+  "definition_of_done_v0": [
+    "The repo contains a valid manifest and stable skill paths.",
+    "At least four deep v0 skills are authored: deploy/test unification, branching-tree technique, fuzz bounds, invariant handlers.",
+    "At least one write-solidity skill exists for module structure.",
+    "At least one Foundry example compiles and tests successfully.",
+    "All external references are exact links, preferably pinned to commit SHAs.",
+    "The package can be consumed by a future CLI without hard-coding skill content."
+  ],
+  "open_questions": [
+    "Should this package stay EVM-only or eventually include broader onchain skills?",
+    "Which exact Hifi V3 files should be the first pinned references?",
+    "Should examples be full Foundry projects or minimal snippets until the CLI exists?",
+    "Should skill IDs use slash paths like test-verify/deploy-test-unification or package-style ids like test_verify.deploy_test_unification?",
+    "What validation script should enforce manifest-to-path consistency?"
+  ]
+}

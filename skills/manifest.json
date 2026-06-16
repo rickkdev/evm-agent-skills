@@ -1,0 +1,66 @@
+{
+  "schema_version": "0.1.0",
+  "package": {
+    "name": "evm-agent-skills",
+    "version": "0.0.0",
+    "status": "draft"
+  },
+  "skills": [
+    {
+      "id": "write-solidity/module-structure",
+      "path": "skills/write-solidity/module-structure/SKILL.md",
+      "description": "Skeleton for guiding Solidity module boundaries, contract layout, dependency direction, and source organization.",
+      "tags": ["solidity", "architecture", "module-structure", "source-layout"],
+      "version": "0.0.0",
+      "status": "draft/skeleton"
+    },
+    {
+      "id": "write-solidity/naming-and-natspec",
+      "path": "skills/write-solidity/naming-and-natspec/SKILL.md",
+      "description": "Skeleton for naming, NatSpec, and interface documentation conventions for Solidity agents.",
+      "tags": ["solidity", "naming", "natspec", "documentation"],
+      "version": "0.0.0",
+      "status": "draft/skeleton"
+    },
+    {
+      "id": "write-solidity/security-primitives-checklist",
+      "path": "skills/write-solidity/security-primitives-checklist/SKILL.md",
+      "description": "Skeleton for a pre-implementation checklist around common Solidity security primitives and integration risks.",
+      "tags": ["solidity", "security", "checklist", "primitives"],
+      "version": "0.0.0",
+      "status": "draft/skeleton"
+    },
+    {
+      "id": "test-verify/deploy-test-unification",
+      "path": "skills/test-verify/deploy-test-unification/SKILL.md",
+      "description": "Skeleton for unifying Foundry deploy scripts and test setup through shared construction logic.",
+      "tags": ["foundry", "testing", "deployment", "forge-script"],
+      "version": "0.0.0",
+      "status": "draft/skeleton"
+    },
+    {
+      "id": "test-verify/branching-tree-technique",
+      "path": "skills/test-verify/branching-tree-technique/SKILL.md",
+      "description": "Skeleton for deriving concrete and fuzz tests from branch-complete behavior trees.",
+      "tags": ["foundry", "testing", "specification", "branching-tree"],
+      "version": "0.0.0",
+      "status": "draft/skeleton"
+    },
+    {
+      "id": "test-verify/constraint-derived-fuzz-bounds",
+      "path": "skills/test-verify/constraint-derived-fuzz-bounds/SKILL.md",
+      "description": "Skeleton for selecting Foundry fuzz bounds from protocol constraints instead of arbitrary ranges.",
+      "tags": ["foundry", "fuzzing", "testing", "constraints"],
+      "version": "0.0.0",
+      "status": "draft/skeleton"
+    },
+    {
+      "id": "test-verify/invariant-handler-store-pattern",
+      "path": "skills/test-verify/invariant-handler-store-pattern/SKILL.md",
+      "description": "Skeleton for designing invariant handlers and state stores that make protocol invariants observable.",
+      "tags": ["foundry", "invariants", "handlers", "stateful-testing"],
+      "version": "0.0.0",
+      "status": "draft/skeleton"
+    }
+  ]
+}

@@ -33,10 +33,10 @@
     {
       "id": "test-verify/deploy-test-unification",
       "path": "skills/test-verify/deploy-test-unification/SKILL.md",
-      "description": "Skeleton for unifying Foundry deploy scripts and test setup through shared construction logic.",
+      "description": "Draft operational skill for unifying Foundry deploy scripts and test setup through shared construction logic.",
       "tags": ["foundry", "testing", "deployment", "forge-script"],
-      "version": "0.0.0",
-      "status": "draft/skeleton"
+      "version": "0.1.0",
+      "status": "draft"
     },
     {
       "id": "test-verify/branching-tree-technique",

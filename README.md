@@ -8,7 +8,7 @@ The goal is not a link list or toy scaffold. The goal is reusable agent knowledg
 
 ## Current status
 
-Milestone 0 foundation is complete. The repository contains the v0 package skeleton, manifest, authoring docs, and placeholder skill files. The skill files are drafts, not production-ready guidance.
+Milestone 1 draft is in progress. The deploy/test unification skill now has operational draft guidance and a minimal executable Foundry example. Other skill files remain draft skeletons, not production-ready guidance.
 
 ## Repository structure
 
@@ -41,6 +41,10 @@ skills/
       SKILL.md
 examples/
   foundry-deploy-test-unification/
+    foundry.toml
+    src/BalanceSheet.sol
+    script/DeployBalanceSheet.s.sol
+    test/BalanceSheet.t.sol
   foundry-branching-tree/
 ```
 
@@ -62,11 +66,11 @@ python3 -m json.tool skills/manifest.json >/tmp/manifest.json
 git status --short
 ```
 
-## Next milestone
+## Milestone 1
 
-Milestone 1 is the deploy/test unification skill:
+Milestone 1 is the deploy/test unification skill draft:
 
-- Author `skills/test-verify/deploy-test-unification/SKILL.md` beyond the skeleton.
-- Add at least one curated exact reference file.
-- Add a minimal Foundry example demonstrating shared deploy construction logic.
-- Verify the example with `forge build` and `forge test`.
+- `skills/test-verify/deploy-test-unification/SKILL.md` is authored beyond the skeleton.
+- `skills/test-verify/deploy-test-unification/references/foundry-deploy-test-unification.md` records the local executable reference and notes that no external pinned references are included yet.
+- `examples/foundry-deploy-test-unification/` demonstrates shared deploy construction logic.
+- Validate with `forge build` and `forge test` when Foundry is installed.

@@ -5,7 +5,7 @@
     "status": "prd",
     "owner": "rickkdev",
     "repository": "https://github.com/rickkdev/evm-agent-skills",
-    "summary": "A deep operational skill package for AI agents building production-grade EVM protocols, starting with Solidity and Foundry testing methodology.",
+    "summary": "A deep operational skill package for AI agents building on Ethereum, starting with Solidity and Foundry testing methodology.",
     "non_goals": [
       "Do not build a generic web3 link directory.",
       "Do not scaffold toy ERC20 projects.",
@@ -15,7 +15,7 @@
     ]
   },
   "positioning": {
-    "core_thesis": "Foundry provides the EVM development substrate. evm-agent-skills provides the agent-readable methodology layer: how to structure Solidity, derive tests, unify deploy/test setup, bound fuzzing, and use deterministic Foundry feedback safely.",
+    "core_thesis": "Foundry provides the Ethereum smart contract development substrate. evm-agent-skills provides the agent-readable methodology layer: how to structure Solidity, derive tests, unify deploy/test setup, bound fuzzing, and use deterministic Foundry feedback safely.",
     "value_beyond_foundry": [
       "Agent-readable development and verification methodology.",
       "Operational checklists and examples for production-grade Solidity workflows.",
@@ -26,7 +26,7 @@
     "quality_bar": "If a skill could fit in a basic Ethereum cheat-sheet, it is too shallow for this repo. Each skill must help an agent make better engineering decisions and produce verifiable code."
   },
   "audience": [
-    "AI coding agents working inside EVM protocol repositories",
+    "AI coding agents working inside Ethereum application, smart contract, and protocol repositories",
     "Solidity developers who want repeatable agent workflows",
     "Future agentic-solidity CLI users",
     "Protocol teams adopting agent-assisted development without lowering safety standards"
@@ -286,7 +286,7 @@
     "The package can be consumed by a future CLI without hard-coding skill content."
   ],
   "open_questions": [
-    "Should this package stay EVM-only or eventually include broader onchain skills?",
+    "Should this package stay Ethereum/EVM-focused or eventually include broader onchain skills?",
     "Which exact Hifi V3 files should be the first pinned references?",
     "Should examples be full Foundry projects or minimal snippets until the CLI exists?",
     "Should skill IDs use slash paths like test-verify/deploy-test-unification or package-style ids like test_verify.deploy_test_unification?",

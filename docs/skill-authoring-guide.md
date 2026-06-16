@@ -1,6 +1,6 @@
 # Skill authoring guide
 
-Skills are operational instructions for AI agents working in EVM repositories. They should be narrow enough to load for one task and concrete enough to drive code changes, tests, and verification.
+Skills are operational instructions for AI agents building on Ethereum. They should be narrow enough to load for one task and concrete enough to drive code changes, tests, and verification.
 
 ## Format
 

@@ -1,6 +1,6 @@
 # evm-agent-skills
 
-Deep, operational skills for AI agents building production-grade EVM protocols.
+Deep, operational skills for AI agents building on Ethereum.
 
 This repo starts with Solidity + Foundry methodology: deploy/test unification, branching-tree specs, fuzz bounds, invariant handlers, and module-structure guidance.
 
